@@ -5,9 +5,9 @@ import React from 'react'
 const Landing = () => {
   return (
     <div className='h-screen px-4 pt-24 pb-4 flex flex-col justify-between'>
-      <div className="space-y-12">
+      <div className="md:space-y-12 md:m-0 space-y-8 mt-24">
         <p className="uppercase">About sprouting roots</p>
-        <h1 className="text-7xl font-extrabold tracking-tight">The goal is<br/>to empower you to GROW<br/>nutritious sustainable food!</h1>
+        <h1 className="md:text-7xl text-3xl font-extrabold tracking-tight">The goal is<br/>to empower you to GROW<br/>nutritious sustainable food!</h1>
       </div>
       <div className="">
         <Cta />
