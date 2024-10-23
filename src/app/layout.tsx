@@ -1,17 +1,13 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Manrope, Quicksand, Poppins } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/elements/header";
+import QueryProvider from "@/providers/query-provider";
+import Footer from "@/components/elements/footer";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const manrope = Manrope({ subsets: ["latin"] });
+const quicksand = Quicksand({ subsets: ["latin"] });
+// const poppins = Poppins();
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,9 +22,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={manrope.className}
       >
-        {children}
+        <QueryProvider>
+          <Header />
+          {children}
+          <Footer />
+        </QueryProvider>
       </body>
     </html>
   );
