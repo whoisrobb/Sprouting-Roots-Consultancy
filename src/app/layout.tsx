@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/elements/header";
 import QueryProvider from "@/providers/query-provider";
 import Footer from "@/components/elements/footer";
+import LenisProvider from "@/providers/lenis-provider";
 
 const manrope = Manrope({ subsets: ["latin"] });
 const quicksand = Quicksand({ subsets: ["latin"] });
@@ -25,9 +26,11 @@ export default function RootLayout({
         className={manrope.className}
       >
         <QueryProvider>
+          <LenisProvider>
           <Header />
           {children}
           <Footer />
+          </LenisProvider>
         </QueryProvider>
       </body>
     </html>
