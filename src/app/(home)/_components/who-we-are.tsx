@@ -10,14 +10,14 @@ const WhoWeAre = () => {
     const description = useRef(null);
     const paragraph = useSplitPara(p1, description);
   return (
-    <div className='grid grid-cols-4 p-4'>
+    <div className='md:grid grid-cols-4 p-4'>
         <div className="">
             <h1 className="uppercase">Who we are</h1>
         </div>
 
         <div className="col-span-3 space-y-8" ref={description}>
             <div className="space-y-4 flex gap-4 lg:flex-row flex-col justify-between w-full items-start">
-                <p className="text-5xl font-bold leading-tight tracking-tight flex flex-wrap gap-x-2">
+                <p className="md:text-5xl text-2xl font-bold leading-tight tracking-tight flex flex-wrap gap-x-2">
                     {paragraph}
                 </p>
             </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import Landing from './_components/landing'
 import WhoWeAre from './_components/who-we-are'
-import StaggeredGrid from './_components/motion-images'
+// import StaggeredGrid from './_components/motion-images'
 import GardenGoodness from './_components/garden-goodness'
 
 const Home = () => {
@@ -9,7 +9,7 @@ const Home = () => {
     <div className=''>
       <Landing />
       <WhoWeAre />
-      <StaggeredGrid />
+      {/* <StaggeredGrid /> */}
       <GardenGoodness />
     </div>
   )
