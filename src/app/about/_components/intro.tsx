@@ -12,7 +12,7 @@ const Intro = () => {
     const paragraph = useSplitPara(p1, description);
     const paragraphTwo = useSplitPara(p2, description);
   return (
-    <div className='grid md:grid-cols-4 px-4 gap-12 grid-cols-1 py-12 lg:h-screen' ref={description}>
+    <div className='grid md:grid-cols-4 px-4 gap-12 grid-cols-1 py-12 lg:h-screen'>
         <div className="col-span-3 space-y-8" ref={description}>
             <div className="space-y-4 flex gap-4 lg:flex-row flex-col justify-between w-full items-start">
                 <p className="md:text-4xl text-3xl font-bold leading-tight tracking-tight flex flex-wrap gap-x-2">
